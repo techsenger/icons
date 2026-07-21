@@ -21,7 +21,6 @@ complement. Techsenger Icons is not affiliated with or endorsed by the authors o
 Key features include:
 
 * Additional icons for existing popular icon sets.
-* Icons designed for use in JavaFX applications.
 * SVG and font-based icon support.
 * Simple integration with existing icon libraries.
 
@@ -32,8 +31,9 @@ The included icons are designed to complement the original icon set and cover mi
 
 ## Usage <a name="usage"></a>
 
-All icons are provided in SVG format. They are also combined into TTF fonts, which can be integrated into
-applications in the same way as any other custom font.
+All icons are provided in SVG format. They are also combined into TTF fonts, which can be integrated into applications in the same way as any other custom font.
+
+The latest generated TTF fonts can be downloaded from the Artifacts section of the latest successful [GitHub Actions](https://github.com/techsenger/icons/actions) workflow run.
 
 ## Code Building <a name="code-building"></a>
 
