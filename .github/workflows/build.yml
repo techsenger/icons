@@ -1,0 +1,35 @@
+name: Build MDI Extension Font
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          pip install "fonttools[lxml]"
+
+      - name: Generate TTF font
+        working-directory: mdi-extension
+        run: |
+          python3 ttfgenerator.py
+
+      - name: Upload TTF font
+        uses: actions/upload-artifact@v4
+        with:
+          name: techsenger-mdi-extension
+          path: mdi-extension/*.ttf
