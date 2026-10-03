@@ -23,6 +23,13 @@ icons = {
     0xE004: ("file-application", "file-application.svg"),
     0xE005: ("base-disk", "base-disk.svg"),
     0xE006: ("network-disk", "network-disk.svg"),
+    0xE007: ("folder-link", "folder-link.svg"),
+    0xE008: ("file-link", "file-link.svg"),
+    0xE009: ("folder-video", "folder-video.svg"),
+    0xE00A: ("desktop", "desktop.svg"),
+    0xE00B: ("folder-desktop", "folder-desktop.svg"),
+    0xE00C: ("file-alert", "file-alert.svg"),
+    0xE00D: ("folder-alert", "folder-alert.svg"),
 }
 
 glyph_order = [".notdef"] + [name for _, (name, _) in icons.items()]
