@@ -79,14 +79,15 @@ fb.setupOS2(
     sCapHeight=0,
 )
 fb.setupNameTable({
-    "familyName": "Techsenger MDI Extension",
+    "familyName": "Techsenger Icons MDI",
     "styleName": "Regular",
-    "uniqueFontIdentifier": "Techsenger MDI Extension: Regular: 2026",
-    "fullName": "Techsenger MDI Extension Regular",
-    "psName": "TechsengerMDIExtension-Regular",
+    "uniqueFontIdentifier": "Techsenger Icons MDI: Regular: 2026",
+    "fullName": "Techsenger Icons MDI Regular",
+    "psName": "TechsengerIconsMDI-Regular",
     "version": "Version 1.0",
+    "manufacturer": "Techsenger",
 })
 fb.setupPost()
 
-fb.save("techsenger-mdi-extension.ttf")
-print("Done: techsenger-mdi-extension.ttf")
+fb.save("techsenger-icons-mdi.ttf")
+print("Done: techsenger-icons-mdi.ttf")
