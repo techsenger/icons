@@ -31,5 +31,5 @@ jobs:
       - name: Upload TTF font
         uses: actions/upload-artifact@v4
         with:
-          name: techsenger-mdi-extension
-          path: mdi-extension/*.ttf
+          name: techsenger-icons-mdi
+          path: mdi/*.ttf
