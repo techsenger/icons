@@ -30,6 +30,7 @@ icons = {
     0xE00B: ("folder-desktop", "folder-desktop.svg"),
     0xE00C: ("file-alert", "file-alert.svg"),
     0xE00D: ("folder-alert", "folder-alert.svg"),
+    0xE00E: ("other-link", "other-link.svg"),
 }
 
 glyph_order = [".notdef"] + [name for _, (name, _) in icons.items()]
