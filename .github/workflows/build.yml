@@ -24,7 +24,7 @@ jobs:
           pip install "fonttools[lxml]"
 
       - name: Generate TTF font
-        working-directory: mdi-extension
+        working-directory: mdi
         run: |
           python3 ttfgenerator.py
 
