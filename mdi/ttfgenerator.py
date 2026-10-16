@@ -30,7 +30,17 @@ icons = {
     0xE00B: ("folder-desktop", "folder-desktop.svg"),
     0xE00C: ("file-alert", "file-alert.svg"),
     0xE00D: ("folder-alert", "folder-alert.svg"),
-    0xE00E: ("other-link", "other-link.svg"),
+    0xE00E: ("file-hourglass", "file-hourglass.svg"),
+    0xE00F: ("folder-hourglass", "folder-hourglass.svg"),
+    0xE010: ("file-other-alert", "file-other-alert.svg"),
+    0xE011: ("file-other-hourglass", "file-other-hourglass.svg"),
+    0xE012: ("file-other-link", "file-other-link.svg"),
+    0xE013: ("file-other-link-alert", "file-other-link-alert.svg"),
+    0xE014: ("file-other-link-hourglass", "file-other-link-hourglass.svg"),
+    0xE015: ("file-link-alert", "file-link-alert.svg"),
+    0xE016: ("file-link-hourglass", "file-link-hourglass.svg"),
+    0xE017: ("folder-link-alert", "folder-link-alert.svg"),
+    0xE018: ("folder-link-hourglass", "folder-link-hourglass.svg"),
 }
 
 glyph_order = [".notdef"] + [name for _, (name, _) in icons.items()]

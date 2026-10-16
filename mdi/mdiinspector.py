@@ -1,6 +1,6 @@
 # to run the script:
 #   sudo apt-get install fontforge
-#   fontforge -script mdiinspect.py
+#   fontforge -script mdiinspector.py
 
 import fontforge
 
