@@ -21,7 +21,7 @@ icons = {
     0xE002: ("file-document", "file-document.svg"),
     0xE003: ("file-font", "file-font.svg"),
     0xE004: ("file-application", "file-application.svg"),
-    0xE005: ("base-disk", "base-disk.svg"),
+    0xE005: ("base-drive", "base-drive.svg"),
     0xE006: ("network-disk", "network-disk.svg"),
     0xE007: ("folder-link", "folder-link.svg"),
     0xE008: ("file-link", "file-link.svg"),
