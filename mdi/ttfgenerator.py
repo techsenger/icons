@@ -41,6 +41,7 @@ icons = {
     0xE016: ("file-link-hourglass", "file-link-hourglass.svg"),
     0xE017: ("folder-link-alert", "folder-link-alert.svg"),
     0xE018: ("folder-link-hourglass", "folder-link-hourglass.svg"),
+    0xE019: ("ssd", "ssd.svg"),
 }
 
 glyph_order = [".notdef"] + [name for _, (name, _) in icons.items()]
