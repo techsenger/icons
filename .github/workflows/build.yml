@@ -49,11 +49,12 @@ jobs:
         run: |
           python3 ttfgenerator.py
 
-      # One archive for all icon sets: every set has its own folder with the font and the license.
+      # One flat archive for all icon sets: every set gives techsenger-icons-<set>.ttf and LICENSE-<SET>.txt.
       - name: Prepare distribution
         run: |
-          mkdir -p dist/mdi
-          cp mdi/techsenger-icons-mdi.ttf mdi/LICENSE.txt dist/mdi/
+          mkdir dist
+          cp mdi/techsenger-icons-mdi.ttf dist/
+          cp mdi/LICENSE.txt dist/LICENSE-MDI.txt
 
       - name: Upload distribution
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
