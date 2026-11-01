@@ -54,7 +54,7 @@ jobs:
         run: |
           mkdir dist
           cp mdi/techsenger-icons-mdi.ttf dist/
-          cp mdi/LICENSE.txt dist/LICENSE-MDI.txt
+          cp mdi/LICENSE-MDI.txt dist/
 
       - name: Upload distribution
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
