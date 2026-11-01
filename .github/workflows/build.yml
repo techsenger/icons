@@ -6,9 +6,14 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-22.04
+    env:
+      VERSION: snapshot
 
     steps:
       - name: Checkout repository
@@ -28,8 +33,27 @@ jobs:
         run: |
           python3 ttfgenerator.py
 
-      - name: Upload TTF font
+      # One archive for all icon sets: every set has its own folder with the font and the license.
+      - name: Prepare distribution
+        run: |
+          mkdir -p dist/mdi
+          cp mdi/techsenger-icons-mdi.ttf mdi/LICENSE.txt dist/mdi/
+
+      - name: Upload distribution
         uses: actions/upload-artifact@v4
         with:
-          name: techsenger-icons-mdi
-          path: mdi/*.ttf
+          name: techsenger-icons-${{ env.VERSION }}
+          path: dist
+
+      # There is always one snapshot release: every build moves its tag to the current commit and replaces the file.
+      - name: Update snapshot release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          (cd dist && zip -r "../techsenger-icons-$VERSION.zip" .)
+          gh release view snapshot > /dev/null 2>&1 || gh release create snapshot \
+            --prerelease --latest=false --target "$GITHUB_SHA" \
+            --title "Snapshot" --notes "Latest development build of the icons."
+          git tag -f snapshot "$GITHUB_SHA"
+          git push -f origin snapshot
+          gh release upload snapshot "techsenger-icons-$VERSION.zip" --clobber
